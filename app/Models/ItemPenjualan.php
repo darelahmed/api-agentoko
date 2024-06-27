@@ -9,11 +9,11 @@ class ItemPenjualan extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nota', 'id_barang', 'qty'];
+    protected $fillable = ['id_barang', 'qty'];
 
     public function penjualan()
     {
-        return $this->belongsTo(Penjualan::class, 'nota');
+        return $this->belongsTo(Penjualan::class, 'id_nota');
     }
 
     public function barang()
