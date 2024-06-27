@@ -9,7 +9,7 @@ class Penjualan extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['tanggal', 'id_pelanggan', 'sub_total'];
+    protected $fillable = ['id_nota', 'tanggal', 'id_pelanggan', 'sub_total'];
 
     public function pelanggan()
     {
@@ -18,6 +18,6 @@ class Penjualan extends Model
 
     public function itemPenjualans()
     {
-        return $this->hasMany(ItemPenjualan::class, 'nota');
+        return $this->hasMany(ItemPenjualan::class, 'id_nota');
     }
 }
