@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('id_nota')->constrained('item_penjualans');
             $table->date('tanggal');
             $table->foreignId('id_pelanggan')->constrained('pelanggans');
-            $table->double('sub_total');
+            $table->integer('sub_total');
             $table->timestamps();
         });
     }
